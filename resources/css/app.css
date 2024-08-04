@@ -111,3 +111,31 @@
     bottom: -164px;
     animation-delay: 21s;
 }
+
+/* hover menu effect */
+
+.link-menu {
+    transition: 0.4s;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 0 5px;
+    position: relative;
+  }
+  .link-menu::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #f97316;
+    transition: all 0.4s;
+  }
+  .link-menu:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+/* hover menu effect */
+
