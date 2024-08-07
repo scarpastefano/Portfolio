@@ -58,7 +58,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('post.edit', compact('post'));
     }
 
     /**
@@ -66,7 +66,19 @@ class PostController extends Controller
      */
     public function update(UpdatePostRequest $request, Post $post)
     {
-        //
+        $path_image = $post->image;
+        if ($request->hasFile('image') && $request->file('image')){
+            $path_name = $request->file('image')->getClientOriginalName();
+            $path_image = $request->file('image')->storeAs('public/images', $path_name);
+        };
+
+        $post->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $path_image
+        ]);
+
+        return redirect()->route('dashboard')->with('update', 'Post modificato con successo');
     }
 
     /**

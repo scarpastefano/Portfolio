@@ -15,6 +15,11 @@
             <span class="font-medium">{{session('delete')}}</span>
         </div>
         @endif
+        @if (session('update'))    
+        <div id="flash" class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-500 role="alert">
+            <span class="font-medium">{{session('update')}}</span>
+        </div>
+        @endif
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 min-h-52">
 
