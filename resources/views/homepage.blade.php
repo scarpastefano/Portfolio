@@ -12,7 +12,48 @@
       <li></li>
       <li></li>
       <li></li>
-    </ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+
     <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 min-h-screen justify-center content-center">
       <div class="text-gray-50 sm:col-span-8 p-14">
         <p class="font-bold text-5xl">Ciao, sono <span class="text-orange-500">Stefano</span></p>
@@ -40,11 +81,10 @@
         {{-- <a href="" class="text-orange-500 font-bold h4 mt-5 w-44 h-12 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 animate-ping absolute inline-flex opacity-80 duration-1000"></a> --}}
         <a href="{{route('dashboard')}}" class="text-gray-50 font-bold h4 mt-5 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 relative inline-flex animate-pulse">Dashboard</a>
       </div>
-      
     </div>
   </div>
   
-  
+  <div class="container-none bg-gray-900">
   <div class="container h-screen grid grid-cols-1 sm:grid-cols-2">
     <div class="justify-center content-center">
       <h2 class="h1 text-gray-50 text-center font-bold">Tecnologie che uso</h2>
@@ -96,6 +136,7 @@
       </svg>
     </div>
   </div>
+</div>
 
 
   <div class="container-sm flex flex-row flex-wrap w-full gap-5 justify-between my-12">

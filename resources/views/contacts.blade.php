@@ -23,7 +23,7 @@
         <textarea id="description" name="description" rows="4" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Inserisci una descrizione"></textarea>
         
         
-        <button type="submit" class="my-4 text-gray-900 bg-orange-500 focus:outline-none hover:bg-orange-700 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Invia</button>
+        <button type="submit" class="my-4 text-gray-50 font-black bg-orange-500 focus:outline-none hover:bg-orange-700 focus:ring-4 focus:ring-gray-100 rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Invia</button>
         
     </form>
 </div>
