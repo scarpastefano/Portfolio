@@ -35,11 +35,8 @@
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 19s linear infinite;
+    animation: animate 14s linear infinite;
 }
-
-
-
 
 .background li:nth-child(0) {
     left: 64%;
@@ -112,8 +109,8 @@
     animation-delay: 21s;
 }
 
-/* hover menu effect */
 
+/* hover menu effect */
 .link-menu {
     transition: 0.4s;
     color: #ffffff;
@@ -136,6 +133,4 @@
     width: 100%;
     left: 0;
   }
-
 /* hover menu effect */
-

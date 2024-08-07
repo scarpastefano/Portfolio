@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function homepage(){
-        return view('homepage');
+        $posts = Post::take(3)->get();
+        return view('homepage', compact('posts'));
     }
 
     public function aboutme(){
