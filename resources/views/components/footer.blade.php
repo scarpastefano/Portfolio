@@ -31,10 +31,10 @@
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Accesso</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Accedi</a>
+                          <a href="{{ route('login') }}" class="hover:underline ">Accedi</a>
                       </li>
                       <li  class="mb-4">
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Registrati</a>
+                          <a href="{{ route('register') }}" class="hover:underline">Registrati</a>
                       </li>
                       <li class="mb-4">
                           <a href="{{route('dashboard')}}" class="hover:underline">Dashboard</a>
