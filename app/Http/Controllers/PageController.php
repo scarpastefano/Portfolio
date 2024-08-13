@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Tecnologies;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -25,6 +26,7 @@ class PageController extends Controller
 
         $posts = Post::all();
         $users = User::all();
-        return view('dashboard', compact('posts', 'users'));
+        $tecnologie = Tecnologies::all();
+        return view('dashboard', compact('posts', 'users', 'tecnologie'));
     }
 }

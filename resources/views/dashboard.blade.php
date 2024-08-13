@@ -71,7 +71,8 @@
             </div>
             <div class="shadow flex flex-col rounded-3 bg-orange-500 p-4">
                 <p class="text-gray-50 font-semibold h3 mb-auto">Tecnologie</p>
-                <p class="text-gray-50 font-semibold h3">{{ $posts->count() }}</p>
+                <p class="text-gray-50 font-semibold h3">{{ $tecnologie->count() }}</p>
+                <a href="{{ route('tecnologie.index') }}">vai alle tecnologie</a>
             </div>
             
             
@@ -80,7 +81,7 @@
             
             <div class="shadow rounded-3 bg-orange-50 hover:bg-orange-200 justify-items-center content-center p-4">
                 <a href="{{route('post.index')}}" class="h-full w-full flex flex-col">
-                    <p class="text-orange-500 font-semibold h4">Visualizza i post</p>
+                    <p class="text-orange-500 font-semibold h4">Visualizza i progetti</p>
                     <p class="text-orange-500 font-thin h6 mb-auto">Attenzione! Puoi accedere solo se sei amministratore</p>
                     <svg viewBox="0 0 16 16" class="bi bi-arrow-right-circle w-12 fill-orange-500" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -90,7 +91,7 @@
             </div>
             <div class="shadow rounded-3 bg-orange-50 hover:bg-orange-200 justify-items-center content-center p-4">
                 <a href="{{route('post.create')}}" class="h-full w-full flex flex-col">
-                    <p class="text-orange-500 font-semibold h4">Crea un post</p>
+                    <p class="text-orange-500 font-semibold h4">Crea un progetto</p>
                     <p class="text-orange-500 font-thin h6 mb-auto">Attenzione! Puoi accedere solo se sei amministratore</p>
                     <svg viewBox="0 0 16 16" class="bi bi-arrow-right-circle w-12 fill-orange-500" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>

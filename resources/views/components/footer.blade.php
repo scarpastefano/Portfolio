@@ -14,16 +14,16 @@
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Mappa</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                          <a href="{{ route('homepage') }}" class="hover:underline">Home</a>
                       </li>
                       <li class="mb-4">
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          <a href="{{ route('aboutme') }}" class="hover:underline">About me</a>
                       </li>
                       <li class="mb-4">
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          <a href="#" class="hover:underline">Skills</a>
                       </li>
                       <li class="mb-4">
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          <a href="{{ route('contacts') }}" class="hover:underline">Contacts</a>
                       </li>
                   </ul>
               </div>
@@ -40,7 +40,7 @@
                           <a href="{{route('dashboard')}}" class="hover:underline">Dashboard</a>
                       </li>
                       <li class="mb-4">
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                          <a href="#" class="hover:underline">Discord</a>
                       </li>
                   </ul>
               </div>

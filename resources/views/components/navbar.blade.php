@@ -20,16 +20,19 @@
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
       <ul class="flex flex-col font-medium md:p-0 border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row mt-0 md:mt-0 md:border-0 ">
         <li>
-          <a href="{{route('homepage')}}" class="block link-menu text-lg font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+          <a href="{{route('homepage')}}" class="block link-menu text-base font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
         </li>
         <li>
-          <a href="{{route('aboutme')}}" class="block link-menu text-lg font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About me</a>
+          <a href="{{route('aboutme')}}" class="block link-menu text-base font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About me</a>
         </li>
         <li>
-          <a href="#" class="block link-menu text-lg font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Skills</a>
+          <a href="#" class="block link-menu text-base font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Skills</a>
         </li>
         <li>
-          <a href="{{route('contacts')}}" class="block link-menu text-lg font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+          <a href="{{route('contacts')}}" class="block link-menu text-base font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        </li>
+        <li>
+          <a href="{{route('dashboard')}}" class="block link-menu text-base font-thin py-2 px-3 md:p-0 text-gray-100 rounded md:hover:bg-transparent md:hover:text-orange-500 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</a>
         </li>
       </ul>
     </div>
