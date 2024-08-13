@@ -4,7 +4,7 @@
 
 
 
-    <div class="container-sm my-5 py-5 h-screen">
+    <div class="container-sm my-5 py-5 min-h-screen">
 
         {{-- <div id="toast-default" class="fixed float-right flex items-center justify-items-center w-full max-w-xs p-4 rounded-lg shadow text-gray-400 bg-gray-800" role="alert">
             <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">

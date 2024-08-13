@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tecnologies extends Model
+class Tecnologie extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['tecnologie', 'icon'];
+    protected $fillable = ['name', 'icon'];
 }

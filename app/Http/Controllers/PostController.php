@@ -42,7 +42,7 @@ class PostController extends Controller
             'image' => $path_image
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Post creato con successo');
+        return redirect()->route('dashboard')->with('success', 'Progetto creato con successo');
     }
 
     /**
@@ -78,7 +78,7 @@ class PostController extends Controller
             'image' => $path_image
         ]);
 
-        return redirect()->route('dashboard')->with('update', 'Post modificato con successo');
+        return redirect()->route('dashboard')->with('update', 'Progetto modificato con successo');
     }
 
     /**

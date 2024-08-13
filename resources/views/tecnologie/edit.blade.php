@@ -1,17 +1,16 @@
 <x-main>
 
-
-    <form action="{{ route('tecnologie.update', ['tecnologies' => $tecnologies->id]) }}" method="POST" enctype="multipart/form-data" class="my-28 container-sm">
+    <form action="{{ route('tecnologie.update', compact('tecnologie')) }}" method="POST" enctype="multipart/form-data" class="my-28 container-sm">
         @csrf
         @method('PUT')
-        <label for="tecnologie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-        <input type="text" id="tecnologie" name="tecnologie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mb-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="{{ $tecnologies->tecnologie }}"/>
-
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titolo</label>
+        <input type="text" id="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mb-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" value="{{ $tecnologie->name }}"/>
+    
         
         <p class="mb-2 mt-4 text-sm font-medium text-gray-900 dark:text-white">Immagine</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-                <img class="w-full h-64 border rounded-3 object-cover" src="{{Storage::url($tecnologies->icon)}}" alt="nessuna immagine">
+                <img class="w-full h-64 border rounded-3 object-cover" src="{{ Storage::URL($tecnologie->icon) }}" alt="nessuna immagine">
             </div>
             <div>
                 <div class="flex items-center justify-center w-full">
@@ -23,7 +22,7 @@
                             <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                             <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                         </div>
-                        <input id="dropzone-file" name="icon" value type="file" class="text-xs text-gray-500 dark:text-gray-400" value="{{ Storage::url($tecnologies->icon) }}" />
+                        <input id="dropzone-file" name="icon" value type="file" class="text-xs text-gray-500 dark:text-gray-400" value="{{ Storage::URL($tecnologie->icon) }}" />
                     </label>
                 </div> 
             </div>
@@ -38,6 +37,5 @@
         <button type="submit" class="my-4 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Aggiorna</button>
         
     </form>
-
 
 </x-main>

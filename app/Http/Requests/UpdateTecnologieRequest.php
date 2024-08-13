@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreTecnologiesRequest extends FormRequest
+class UpdateTecnologieRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,8 @@ class StoreTecnologiesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'tecnologie' => 'required',
-            'image' => 'nullable'
+            'name' => 'required',
+            'icon' => 'nullable'
         ];
     }
 }

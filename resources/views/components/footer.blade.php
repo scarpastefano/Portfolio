@@ -20,7 +20,7 @@
                           <a href="{{ route('aboutme') }}" class="hover:underline">About me</a>
                       </li>
                       <li class="mb-4">
-                          <a href="#" class="hover:underline">Skills</a>
+                          <a href="#" class="hover:underline">Project</a>
                       </li>
                       <li class="mb-4">
                           <a href="{{ route('contacts') }}" class="hover:underline">Contacts</a>

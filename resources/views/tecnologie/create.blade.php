@@ -3,9 +3,9 @@
 
     <form action="{{ route('tecnologie.store') }}" method="POST" enctype="multipart/form-data" class="mt-28 container-sm">
         @csrf
-        <label for="tecnologie" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titolo</label>
-        <input type="text" id="tecnologie" name="tecnologie" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mb-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nome"/>
-        
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titolo</label>
+        <input type="text" id="name" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 mb-6 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Name"/>
+
         
         <p class="mb-2 mt-4 text-sm font-medium text-gray-900 dark:text-white">Immagine</p>
         <div class="flex items-center justify-center w-full">
@@ -17,7 +17,7 @@
                     <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                     <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                 </div>
-                <input id="dropzone-file" name="icon" type="file" class="hidden" />
+                <input id="dropzone-file" name="name" type="file" class="hidden" />
             </label>
         </div> 
         
