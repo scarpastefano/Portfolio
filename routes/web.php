@@ -11,10 +11,7 @@ Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 
 Route::resource('post', PostController::class)->middleware('auth')->except(['post.show']);
-Route::get('posts/{post}', [
-    'as' => 'post.show',
-    'uses' => 'App\Http\Controllers\PostController'
-])->name('post.show');
+Route::get('posts/{post}', [PostController::class, 'show'])->name('post.show');
 
 Route::resource('tecnologie', TecnologieController::class);
 
