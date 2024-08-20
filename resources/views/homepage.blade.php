@@ -75,11 +75,19 @@
   
   
   <div class="container-none mt-[80px]">
-    <div class="container-full bg-gray-800 h-96 px-8 flex justify-content-center align-items-center flex-col">
-      <h5 class="text-gray-50 font-semibold h4">Per visualizzare la mia dashboard con tutti i progetti e le tecnologie clicca qui</h5>
-      <div class="flex relative justify-center">
-        {{-- <a href="" class="text-orange-500 font-bold h4 mt-5 w-44 h-12 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 animate-ping absolute inline-flex opacity-80 duration-1000"></a> --}}
-        <a href="{{route('dashboard')}}" class="text-gray-50 font-bold h4 mt-5 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 relative inline-flex">Dashboard</a>
+    <div class="container-full bg-gray-800 min-h-54 px-8 flex justify-content-center align-items-center flex-col">
+      <div class="grid grid-cols-1 sm:grid-cols-12 justify-items-center align-items-center">
+        <div class="col-span-6">
+          <h5 class="text-gray-50 font-semibold h4">Per visualizzare la mia dashboard con tutti i progetti e le tecnologie clicca qui</h5>
+          <div class="flex relative justify-center">
+            {{-- <a href="" class="text-orange-500 font-bold h4 mt-5 w-44 h-12 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 animate-ping absolute inline-flex opacity-80 duration-1000"></a> --}}
+            <a href="{{route('dashboard')}}" class="text-gray-50 font-bold h4 mt-5 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 relative inline-flex">Dashboard</a>
+          </div>
+        </div>
+        <div class="col-span-6">
+          <img src="{{ URL::asset('asset/iphone-dashboard.png') }}" class="h-54 relative" alt="">
+          <div class="w-54 h-54 bg-slate-200 absolute top-0 left-0"></div>
+        </div>
       </div>
     </div>
   </div>
