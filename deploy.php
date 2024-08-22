@@ -24,9 +24,9 @@ host('production')
 // and you'd have a successful deployment at this point.
 
 // define the paths to PHP & Composer binaries on the server
-set('bin/php', '/usr/local/bin/php');
-set('bin/npm', '/usr/local/bin/npm');
-set('bin/composer', '{{bin/php}} /usr/local/bin/composer');
+// set('bin/php', '/usr/local/bin/php');
+// set('bin/npm', '/usr/local/bin/npm');
+// set('bin/composer', '{{bin/php}} /usr/local/bin/composer');
 
 // a couple of additional options
 set('allow_anonymous_stats', false);
@@ -37,9 +37,9 @@ set('git_tty', true);
 
 // compile our production assets
 task('npm:build', function () {
-    run('cd {{release_path}} && {{bin/npm}} install');
-    run('cd {{release_path}} && {{bin/npm}} run build');
-    run('cd {{release_path}} && {{bin/npm}} install --omit=dev');
+    run('cd {{release_path}} && npm install');
+    run('cd {{release_path}} && npm run build');
+    run('cd {{release_path}} && npm install --omit=dev');
 })->desc('Compile npm files locally');
 after('deploy:vendors', 'npm:build');
 
