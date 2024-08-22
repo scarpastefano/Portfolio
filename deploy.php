@@ -1,63 +1,56 @@
 <?php
+
 namespace Deployer;
 
+// load in the Laravel recipe, this will do the heavy lifting.
 require 'recipe/laravel.php';
 
-set('bin/php', function () {
-    return '/bin/php8.3';
-});
-
-// Project name
-// set('application', 'datarepository');
-
-// Project repository
+// tell Deployer where your Git repository is
 set('repository', 'git@github.com:scarpastefano/Portfolio.git');
 
-// [Optional] Allocate tty for git clone. Default value is false.
+// the http user, generally the same as the SSH/remote_user
+set('http_user', 'root');
+
+// configure your environments, you can have as many as you like here!
+host('production')
+    ->set('labels', ['stage' => 'production'])
+    ->set('hostname', '195.231.86.127') // the server hostname
+    // ->set('branch', 'release/production') // the git branch to deploy
+    ->set('remote_user', 'root') // the SSH user
+    ->set('deploy_path', '/var/www/html/portfolio'); // the path to deploy to
+
+
+// its likely that you can get away without modifying anything more
+// and you'd have a successful deployment at this point.
+
+// define the paths to PHP & Composer binaries on the server
+set('bin/php', '/usr/local/bin/php');
+set('bin/npm', '/usr/local/bin/npm');
+set('bin/composer', '{{bin/php}} /usr/local/bin/composer');
+
+// a couple of additional options
+set('allow_anonymous_stats', false);
 set('git_tty', true);
 
-// Shared files/dirs between deploys
-add('shared_files', [
-    '.env',
-]);
-set('shared_dirs', [
-    'var/logs', 'var/sessions',
-    'public/uploads',
-    'public/data'
-]);
+// now onto the build steps, in most cases, you can leave these as below,
+// but you can add or remove build steps as required!
 
-// Writable dirs by web server
-set('writable_dirs', [
-    'var/sessions',
-    'var/cache',
-    'var/logs',
-    'public/uploads',
-    'public/data',
-]);
-set('composer_action', 'install');
+// compile our production assets
+task('npm:build', function () {
+    run('cd {{release_path}} && {{bin/npm}} install');
+    run('cd {{release_path}} && {{bin/npm}} run build');
+    run('cd {{release_path}} && {{bin/npm}} install --omit=dev');
+})->desc('Compile npm files locally');
+after('deploy:vendors', 'npm:build');
 
-set('bin_dir', 'bin');
-set('var_dir', 'var');
-
-set('keep_releases', 3);
-
-// Hosts
-host('195.231.86.127')
-    ->set('remote_user', 'root')
-    ->set('deploy_path', '/var/www/html/portfolio');
-
-// Tasks
-task('build', function () {
-    cd('{{release_path}}');
-    run('npm install');
-    run('npm run build');
-});
-
-after('deploy:update_code', 'build');
-
-// [Optional] if deploy fails automatically unlock.
+// automatically unlock when a deploy fails
 after('deploy:failed', 'deploy:unlock');
 
-// Migrate database before symlink new release.
+// after a deploy, clear our cache and run optimisations
+after('deploy:cleanup', 'artisan:cache:clear');
+after('deploy:cleanup', 'artisan:optimize');
 
-// before('deploy:symlink', 'database:migrate');
+// handle queue restarts
+after('deploy:success', 'artisan:queue:restart');
+after('rollback', 'artisan:queue:restart');
+
