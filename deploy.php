@@ -48,8 +48,12 @@ host('195.231.86.127')
 
 // Tasks
 task('build', function () {
-    run('cd {{release_path}} && build');
+    cd('{{release_path}}');
+    run('npm install');
+    run('npm run prod');
 });
+
+after('deploy:update_code', 'build');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
