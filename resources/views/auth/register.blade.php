@@ -14,7 +14,7 @@
                 <div>
                     <label for="name" class="block text-sm font-medium leading-6 text-gray-50">Nome</label>
                     <div class="mt-2">
-                        <input id="name" name="name" type="name" autocomplete="email" required class="block w-full rounded-md border-1 p-1.5 text-gray-50 shadow-sm ring-1 bg-gray-800 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input id="name" name="name" type="name" autocomplete="email" required class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white">
                     </div>
                 </div>
                 @error('name')
@@ -24,7 +24,7 @@
                 <div>
                     <label for="email" class="block text-sm font-medium leading-6 text-gray-50">Email</label>
                     <div class="mt-2">
-                        <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-1 p-1.5 text-gray-50 shadow-sm ring-1 bg-gray-800 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input id="email" name="email" type="email" autocomplete="email" required class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white">
                     </div>
                 </div>
                 @error('email')
@@ -39,7 +39,7 @@
                         </div> --}}
                     </div>
                     <div class="mt-2">
-                        <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-1 p-1.5 text-gray-50 bg-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white">
                     </div>
                 </div>
                 @error('password')
@@ -51,7 +51,7 @@
                         <label for="password_confirmation" class="block text-sm font-medium leading-6 text-gray-50">Conferma Password</label>
                     </div>
                     <div class="mt-2">
-                        <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="current-password" required class="block w-full rounded-md border-1 p-1.5 text-gray-50 bg-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="current-password" required class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white">
                     </div>
                 </div>
                 @error('password_confirmation')
