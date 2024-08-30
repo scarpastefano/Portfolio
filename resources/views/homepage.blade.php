@@ -75,9 +75,9 @@
   
   
   <div class="container-none mt-[80px]">
-    <div class="container-full bg-gray-800 min-h-54 px-8 flex justify-content-center align-items-center flex-col">
+    <div class="container-full bg-zinc-800 min-h-54 px-8 flex justify-content-center align-items-center flex-col">
       <div class="grid grid-cols-1 sm:grid-cols-12 justify-items-center align-items-center">
-        <div class="col-span-6">
+        <div class="col-span-6 p-12">
           <h5 class="text-gray-50 font-semibold h4">Per visualizzare la mia dashboard con tutti i progetti e le tecnologie clicca qui</h5>
           <div class="flex relative justify-center">
             {{-- <a href="" class="text-orange-500 font-bold h4 mt-5 w-44 h-12 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 animate-ping absolute inline-flex opacity-80 duration-1000"></a> --}}
@@ -93,7 +93,7 @@
   </div>
   
   {{-- sezione con le tecnologie --}}
-  <div class="container-none bg-gray-900">
+  <div class="container-none bg-zinc-900">
     <div class="container min-h-screen grid grid-cols-1 sm:grid-cols-2 py-10">
       <div class="justify-center content-center">
         <h2 class="h1 text-gray-50 text-center font-bold">Tecnologie che uso</h2>
@@ -128,6 +128,9 @@
         </svg>
       </div>
       
+      <hr>
+      <hr class="mb-5 md:mb-0">
+
       <div class="justify-center content-center">
         <h2 class="h1 text-gray-50 text-center font-bold">Tecnologie che studio</h2>
         <p class="font-thin text-gray-50 text-center">Le tecnologie che attualmente sto studiando</p>
@@ -151,7 +154,7 @@
   <div class="container-sm flex flex-row flex-wrap w-full gap-5 justify-center my-16">
     @forelse ($posts as $post)
     
-    <div class="max-w-sm bg-gray-800 rounded-lg shadow w-[20rem]">
+    <div class="max-w-sm bg-zinc-800 rounded-lg shadow w-[20rem]">
       <a href="{{ route('post.show', ['post' => $post->id]) }}">
         <img class="rounded-t-lg w-full h-72 object-cover" src="{{ Storage::url($post->image) }}" alt="nessuna immagine" />
       </a>
@@ -171,7 +174,7 @@
     
     @empty
     
-    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700">
       <a href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
       </a>
@@ -194,7 +197,7 @@
   </div>
   
   
-  <div class="container-none bg-gray-700 py-12">
+  <div class="container-none bg-zinc-700 py-12">
     <div class="w-full grid grid-cols-1 sm:grid-cols-2 container justify-items-center content-center h-[300px]">
       <div class="flex flex-column justify-center align-items-center">
         <p class="text-gray-100 font-semibold h5">Per contattarmi clicca il pulsante</p>
@@ -210,4 +213,5 @@
     </div>
   </div>
   
+
 </x-main>

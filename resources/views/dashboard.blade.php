@@ -23,23 +23,17 @@
         </div> --}}
         
         
-        <h1 class="h1 text-gray-50 font-semibold mt-12">Dashboard Personale    
-            @if (Auth::check())
-            <span class="text-orange-500">Ciao, {{Auth::user()->name}}</span>
-            @else
-            <span class="text-orange-500"></span>
-            @endif
-        </h1>
-        <p class="text-gray-50 font-thin h6">Qui trovi la dashboard con i miei progetti e le tenologie che uso e quelle che sto imparando</p>
+        <h1 class="h1 text-gray-50 font-semibold mt-12">Dashboard Personale</h1>
+        <p class="text-gray-50 font-thin h6 mb-12">Qui trovi la dashboard con i miei progetti e le tenologie che uso e quelle che sto imparando</p>
         
-        @if (Auth::check())
+        {{-- @if (Auth::check())
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="text-red-500 hover:text-red-300 font-bold h6 mb-12">Logout</button>
         </form>
         @else
             <div class="text-orange-500 mb-12 font-bold"><a href="{{ route('login') }}" class="me-3 hover:text-orange-700 underline">Login</a> <a href="{{ route('register') }}" class="hover:text-orange-700 underline">Registration</a></div>
-        @endif
+        @endif --}}
         
         
 
