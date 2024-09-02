@@ -88,6 +88,6 @@ class PostController extends Controller
     {
         $post->delete();
         session()->flash('delete', 'Progetto cancellato con successo');
-        return redirect()->route('dashboard');
+        return redirect()->route('post.index');
     }
 }

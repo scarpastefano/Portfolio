@@ -29,4 +29,9 @@ class PageController extends Controller
         $tecnologie = Tecnologie::all();
         return view('dashboard', compact('posts', 'users', 'tecnologie'));
     }
+
+    public function project(){
+        $posts = Post::all();
+        return view('project', compact('posts'));
+    }
 }
