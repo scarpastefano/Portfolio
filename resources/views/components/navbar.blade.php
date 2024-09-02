@@ -6,7 +6,7 @@
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
       <a href="{{route('contacts')}}">
-        <button type="button" class="border-0 hidden sm:block text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3 text-md px-4 py-2 text-center dark:bg-orange-500 dark:focus:ring-orange-500">Contattami</button>
+        <button type="button" class="border-0 hidden lg:block text-white bg-orange-500 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3 text-md px-4 py-2 text-center dark:bg-orange-500 dark:focus:ring-orange-500">Contattami</button>
       </a>
 
         <button data-collapse-toggle="navbar-cta" type="button" class="outline-none inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700" aria-controls="navbar-cta" aria-expanded="false">
