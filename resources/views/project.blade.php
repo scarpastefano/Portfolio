@@ -7,7 +7,7 @@
       
       <div class="max-w-sm max-h-sm rounded-md group-hover:opacity-25 hover:!opacity-100">
         <a href="{{ route('post.show', ['post' => $post->id]) }}" class="aspect-square overflow-hidden w-full h-auto">
-          <img class="rounded-t-lg relative w-full max-h-[18rem] aspect-square object-cover rounded-md" src="{{Storage::url($post->image)}}" alt="" />
+          <img class="rounded-t-lg relative w-full max-h-[18rem] aspect-square object-cover rounded-md" src="{{Storage::URL($post->image)}}" alt="" />
         </a>
         <div class="pt-3">
           <a href="{{ route('post.show', ['post' => $post->id]) }}">

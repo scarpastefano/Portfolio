@@ -33,7 +33,7 @@ class PostController extends Controller
         $path_image = '';
         if ($request->hasFile('image') && $request->file('image')){
             $path_name = $request->file('image')->getClientOriginalName();
-            $path_image = $request->file('image')->storeAs('public/images', $path_name);
+            $path_image = $request->file('image')->storeAs('public/storage/images', $path_name);
         };
 
         Post::create([
