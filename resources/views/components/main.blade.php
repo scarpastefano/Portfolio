@@ -11,7 +11,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('asset/favicon/favicon-32x32.png')}}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('asset/favicon/favicon-16x16.png')}}">
   <link rel="manifest" href="{{ URL::asset('asset/favicon/site.webmanifest')}}">
-  
+
+
+  <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-zinc-900 h-full text-gray-50">
@@ -42,7 +46,7 @@
     
     gtag('config', 'G-813VELTJS4');
   </script>
-  
-  
+
+
 </body>
 </html>

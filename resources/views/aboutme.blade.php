@@ -1,13 +1,13 @@
 <x-main>
 
 
-    <div class="container-none py-[200px]">
+    <div class="container-none py-[130px]">
         <div class="container-sm h-full">
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-3">
-                <div class="col-span-4 w-full flex justify-center mb-10">
-                    <img class="h-56 w-56 object-cover rounded-5 shadow-lg" src="{{URL::asset('asset/IMG_5344.jpeg')}}" alt="">
+                <div class="col-span-12 sm:col-span-4 w-full flex justify-center mb-10">
+                    <img class="h-56 w-56 object-cover rounded-full shadow-lg" src="{{URL::asset('asset/IMG_5344.jpeg')}}" alt="">
                 </div>
-                <div class="col-span-8 w-full">
+                <div class="col-span-12 sm:col-span-8 w-full">
                     <h2 class="h2 font-bold">Chi sono</h1>
                     <p class="text-gray-50 font-thin h6 leading-7 mb-14">
                         Ciao, mi chiamo Stefano Scarpa. Sono uno Junior Full Stack Developer. Ho sempre avuto la passione per la tecnologia ma recentemente ho conseguito un corso per acquisire le competenze necessarie ad entrare nel mondo del lavoro.

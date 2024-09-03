@@ -1,7 +1,7 @@
 <x-main>
   
   <div class="container-lg">
-    <ul class="background">
+    {{-- <ul class="background">
       <li></li>
       <li></li>
       <li></li>
@@ -52,15 +52,25 @@
       <li></li>
       <li></li>
       <li></li>
-    </ul>
+    </ul> --}}
     
-    <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 min-h-screen my-[30px] sm:my-0 justify-center content-center">
+    <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 min-h-screen my-[10px] sm:my-0 justify-center content-center">
       <div class="text-gray-50 sm:col-span-8 p-14">
         <p class="font-bold text-4xl sm:text-5xl">Ciao, sono <span class="text-orange-500">Stefano</span></p>
         <p><span class="text-orange-500 font-extrabold text-5xl sm:text-6xl">Full-Stack Web Developer</span></p>
+        
+        <div class="flex flex-row gap-3 mt-10">
+          <a href="https://github.com/scarpastefano" class="flex bg-zinc-800 py-2 px-3 rounded-full w-auto justify-center align-middle">
+            <span>Github</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/scarpa-stefano/" class="flex bg-zinc-800 py-2 px-3 rounded-full w-auto justify-center align-middle">
+            <span>Linkedin</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
+          </a>
+        </div>
+        
       </div>
       <div class="text-gray-50 sm:col-span-4 grid justify-items-center content-center">
-        <img class="h-56 w-56 object-cover rounded-5 shadow-lg" src="{{URL::asset('asset/IMG_5344.jpeg')}}" alt="">
+        <img class="h-56 w-56 object-cover rounded-full shadow-lg" src="{{URL::asset('asset/IMG_5344.jpeg')}}" alt="">
       </div>
     </div>
     <div class="grid justify-items-center -mt-12 sm:mt-[-80px] mb-12">
@@ -74,8 +84,8 @@
   </div>
   
   
-  <div class="container-none mt-[80px]">
-    <div class="container-full bg-zinc-800 min-h-54 px-8 flex justify-content-center align-items-center flex-col">
+  <div class="container-none bg-zinc-800 mt-[80px]">
+    <div class="container-sm  min-h-54 px-8 flex justify-content-center align-items-center flex-col">
       <div class="grid grid-cols-1 sm:grid-cols-12 justify-items-center align-items-center">
         <div class="col-span-6 p-12">
           <h5 class="text-gray-50 font-semibold h4">Per visualizzare la mia dashboard con tutti i progetti e le tecnologie clicca qui</h5>
@@ -93,7 +103,7 @@
   </div>
   
   {{-- sezione con le tecnologie --}}
-  <div class="container-none bg-zinc-900">
+  <div class="container-none bg-zinc-900 py-20 ">
     <div class="container min-h-screen grid grid-cols-1 sm:grid-cols-2 py-10">
       <div class="justify-center content-center">
         <h2 class="h1 text-gray-50 text-center font-bold">Tecnologie che uso</h2>
@@ -130,7 +140,7 @@
       
       <hr>
       <hr class="mb-5 md:mb-0">
-
+      
       <div class="justify-center content-center">
         <h2 class="h1 text-gray-50 text-center font-bold">Tecnologie che studio</h2>
         <p class="font-thin text-gray-50 text-center">Le tecnologie che attualmente sto studiando</p>
@@ -154,21 +164,25 @@
   <div class="container-sm flex flex-row flex-wrap w-full gap-5 justify-center my-16">
     @forelse ($posts as $post)
     
-    <div class="max-w-sm bg-zinc-800 rounded-lg shadow w-[20rem]">
-      <a href="{{ route('post.show', ['post' => $post->id]) }}">
-        <img class="rounded-t-lg w-full h-72 object-cover" src="{{ Storage::url($post->image) }}" alt="nessuna immagine" />
+    <div class="max-w-sm max-h-sm rounded-md group-hover:opacity-25 hover:!opacity-100">
+      <a href="{{ route('post.show', ['post' => $post->id]) }}" class="aspect-square overflow-hidden w-full h-auto">
+        <img class="rounded-t-lg relative w-full max-h-[18rem] aspect-square object-cover rounded-md" src="{{Storage::url($post->image)}}" alt="" />
       </a>
-      <div class="p-5">
+      <div class="pt-3">
         <a href="{{ route('post.show', ['post' => $post->id]) }}">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $post->title }}</h5>
+          <h5 class="mb-3 sm:text-2xl text-md font-bold tracking-tight text-white">{{$post->title}}</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2">{{ $post->description }}</p>
-        <a href="{{ route('post.show', ['post' => $post->id]) }}" class="inline-flex items-center underline py-2 text-sm font-medium text-center text-orange-500 hover:text-orange-700">
-          Visualizza
-          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-          </svg>
+        {{-- <p class="mb-3 font-normal sm:text-lg text-xs text-gray-700 dark:text-gray-400">{{$post->description}}</p> --}}
+        <a href="{{ route('post.show', ['post' => $post->id]) }}" class="inline-flex items-center px-3 me-2 mb-2 py-2 text-xs font-medium text-center text-white bg-zinc-800 rounded-lg hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
+          Info progetto
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
         </a>
+        <a href="{{ route('post.show', ['post' => $post->id]) }}" target="_blank" class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-orange-700 rounded-lg hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+          link al progetto
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
+        </a>
+        {{-- <p class="text-xs text-zinc-400 my-3 sm:my-5">{{$post->created_at->format('d/m/Y')}}</p> --}}
+        <p class="text-xs text-zinc-400 my-3">{{$post->created_at->format('d M, Y')}}</p>
       </div>
     </div>
     
@@ -213,5 +227,5 @@
     </div>
   </div>
   
-
+  
 </x-main>

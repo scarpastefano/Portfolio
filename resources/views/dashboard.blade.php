@@ -53,7 +53,7 @@
         </div>
         @endif
         
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 min-h-52">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 min-h-52">
             
             <div class="shadow flex flex-col rounded-3 bg-orange-500 p-4">
                 <p class="text-gray-50 font-semibold h3 mb-auto">Progetti</p>
@@ -71,7 +71,7 @@
             
             
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 min-h-52 mt-3">
+        <div class="grid grid-cols-2 sm:grid-cols-2 gap-3 min-h-52 mt-3">
             
             <div class="shadow rounded-3 bg-orange-50 hover:bg-orange-200 justify-items-center content-center p-4">
                 <a href="{{route('post.index')}}" class="h-full w-full flex flex-col">

@@ -11,11 +11,11 @@
         <div class="grid gap-6 mb-3 md:grid-cols-2">
             <div>
                 <label for="first_name" class="block mb-2 text-sm font-medium text-white">Nome e cognome</label>
-                <input type="text" id="first_name" class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white" placeholder="John" required />
+                <input type="text" id="first_name" class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white" placeholder="Nome e cognome" required />
             </div>
             <div>
                 <label for="last_name" class="block mb-2 text-sm font-medium text-white">Email</label>
-                <input type="email" id="last_name" class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white" placeholder="Doe" required />
+                <input type="email" id="last_name" class="outline-none border-0 border-gray-300 text-sm rounded-lg block w-full p-3 mb-6 bg-zinc-700 dark:border-gray-600 placeholder-gray-400 text-white" placeholder="email" required />
             </div>
         </div>
         
