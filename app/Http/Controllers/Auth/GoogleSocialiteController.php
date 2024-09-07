@@ -51,9 +51,9 @@ class GoogleSocialiteController extends Controller
             }
 
         }
-        // catch (Exception $e)
-        // {
-        //     dd($e->getMessage());
-        // }
+        catch (Exception $e)
+        {
+            dd($e->getMessage());
+        }
     }
 }
