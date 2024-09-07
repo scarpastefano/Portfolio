@@ -11,7 +11,8 @@ class PageController extends Controller
 {
     public function homepage(){
         $posts = Post::take(3)->get();
-        return view('homepage', compact('posts'));
+        $tecnologie = Tecnologie::all();
+        return view('homepage', compact('posts', 'tecnologie'));
     }
 
     public function aboutme(){
