@@ -38,10 +38,10 @@
                     <th scope="row" class="ps-1 pe-3 sm:pe-6 sm:ps-3 py-3 hidden sm:block">
                         <p class="text-sm sm:text-md font-light">#{{ $tech->id }}</p>
                     </th>
-                    <td class="px-3 sm:px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td class="px-3 sm:px-6 py-3 font-medium whitespace-nowrap text-white">
                         <img class="w-8 h-8" src="{{ Storage::URL($tech->icon) }}" alt="nessuna icona">
                     </td>
-                    <td class="px-3 sm:px-6 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <td class="px-3 sm:px-6 py-3 font-medium whitespace-nowrap text-white">
                         <p class="text-sm sm:text-lg">{{ $tech->name }}</p>
                     </td>
                     
