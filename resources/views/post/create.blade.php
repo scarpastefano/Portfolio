@@ -1,6 +1,6 @@
 <x-main>
     
-    <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data" class="my-28 container-sm">
+    {{-- <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data" class="my-28 container-sm">
         @csrf
         <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titolo</label>
         <input type="text" id="title" name="title" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-3 mb-6 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 " placeholder="Titolo"/>
@@ -16,10 +16,11 @@
         <div id="flash" class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-500 role="alert">
             <span class="font-medium">{{$message}}</span>
         </div>            
-        @enderror
+        @enderror --}}
         
         
-        <p class="mb-2 mt-4 text-sm font-medium text-gray-900 dark:text-white">Immagine</p>
+        @livewire('create-article-form')
+        {{-- <p class="mb-2 mt-4 text-sm font-medium text-gray-900 dark:text-white">Immagine</p>
         <div class="flex items-center justify-center w-full">
             <label for="image" class=" mb-6 flex flex-col items-center justify-center w-full h-64 border-gray-300 rounded-lg cursor-pointer bg-gray-700">
                 <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -36,12 +37,12 @@
         <div id="flash" class="p-4 mb-6 text-sm text-red-800 rounded-lg bg-red-500 role="alert">
             <span class="font-medium">{{$message}}</span>
         </div>             
-        @enderror
+        @enderror --}}
 
 
-        <button type="submit" class="my-4 text-zinc-50 bg-orange-500 block focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Crea</button>
+        {{-- <button type="submit" class="my-4 text-zinc-50 bg-orange-500 block focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Crea</button>
         
     </form>
-    
+     --}}
 
 </x-main>

@@ -15,7 +15,9 @@
                     @foreach ($posts as $post)    
                     <tr class="my-8 border-bottom hover:bg-zinc-700 rounded-full">
                         <th scope="row" class="text-zinc-50 sm:px-6 px-2 py-3 whitespace-nowrap">#{{ $post->id }}</th>
-                        <td class="text-zinc-50 text-sm sm:px-6 px-3 py-3"><img class="w-10 aspect-square object-cover" src="{{ Storage::url($post->image) }}" alt="Nessuna immagine"></td>
+                        <td class="text-zinc-50 text-sm sm:px-6 px-3 py-3">
+                            <img class="w-10 aspect-square object-cover" src="{{$post->images->isNotEmpty() ? Storage::URL($post->images->first()->path) : 'https://dummyimage.com/300x300/d4d4d4/fff'}}" alt="Nessuna immagine">
+                        </td>
                         <td class="text-zinc-50 sm:px-6 px-3 py-3">{{ $post->title }}</td>
                         <td class="text-zinc-50 px-6 py-3">
                             <div class="flex flex-row justify-end">

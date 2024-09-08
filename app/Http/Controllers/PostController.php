@@ -30,19 +30,19 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $path_image = '';
-        if ($request->hasFile('image') && $request->file('image')){
-            $path_name = $request->file('image')->getClientOriginalName();
-            $path_image = $request->file('image')->storeAs('public/storage/images', $path_name);
-        };
+        // $path_image = '';
+        // if ($request->hasFile('image') && $request->file('image')){
+        //     $path_name = $request->file('image')->getClientOriginalName();
+        //     $path_image = $request->file('image')->storeAs('public/storage/images', $path_name);
+        // };
 
-        Post::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image' => $path_image
-        ]);
+        // Post::create([
+        //     'title' => $request->title,
+        //     'description' => $request->description,
+        //     'image' => $path_image
+        // ]);
 
-        return redirect()->route('dashboard')->with('success', 'Progetto creato con successo');
+        // return redirect()->route('dashboard')->with('success', 'Progetto creato con successo');
     }
 
     /**
