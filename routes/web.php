@@ -11,6 +11,7 @@ Route::get('/aboutme', [PageController::class, 'aboutme'])->name('aboutme');
 Route::get('/contacts', [PageController::class, 'contacts'])->name('contacts');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/project', [PageController::class, 'project'])->name('project');
+Route::post('/send', [PageController::class, 'send'])->name('send');
 
 Route::resource('post', PostController::class)->middleware('auth')->except(['post.show']);
 Route::get('post/{post}', [PostController::class, 'show'])->name('post.show');
