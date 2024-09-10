@@ -20,6 +20,7 @@ class CreateArticleForm extends Component
     public $title;
     #[Validate('required|min:10|max:500')]
     public $description;
+    public $url;
     public $post;
 
     public function store(){
@@ -27,6 +28,7 @@ class CreateArticleForm extends Component
         $this->post = Post::create([
             'title' => $this->title,
             'description' => $this->description,
+            'url' => $this->url,
         ]);
 
         if(count($this->images) > 0){
@@ -42,6 +44,7 @@ class CreateArticleForm extends Component
     protected function cleanForm(){
         $this->title = '';
         $this->description = '';
+        $this->url = '';
         $this->images = [];
     }
 
