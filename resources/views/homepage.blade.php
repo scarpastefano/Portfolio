@@ -1,74 +1,24 @@
 <x-main>
   
   <div class="container-lg">
-    {{-- <ul class="background">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul> --}}
 
     @if (session('success'))
-    <div id="toast-success" class="slide-bottom flex fixed items-center mx-auto w-full max-w-xs content-center p-3 mb-3 rounded-lg shadow text-zinc-400 bg-zinc-800" role="alert">
-      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-          </svg>
-          <span class="sr-only">Check icon</span>
+    <div class="container-sm justify-center flex">
+      <div id="toast-success" class="container-sm slide-bottom flex fixed items-center max-w-xs content-center justify-center p-3 mb-3 rounded-lg shadow text-zinc-400 bg-green-900" role="alert">
+        <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+            </svg>
+            <span class="sr-only">Check icon</span>
+        </div>
+        <div class="ms-3 text-sm font-normal">{{ session('success') }}</div>
+        <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-zinc-400 hover:bg-zinc-600 hover:text-zinc-500 rounded-lg focus:ring-2 focus:ring-zinc-300 p-1.5 inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#toast-success" aria-label="Close">
+            <span class="sr-only">Close</span>
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
       </div>
-      <div class="ms-3 text-sm font-normal">{{ session('success') }}</div>
-      <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-zinc-400 bg-zinc-800 hover:bg-zinc-600 hover:text-zinc-500 rounded-lg focus:ring-2 focus:ring-zinc-300 p-1.5 inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#toast-success" aria-label="Close">
-          <span class="sr-only">Close</span>
-          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-          </svg>
-      </button>
     </div>
     @endif
     
@@ -92,9 +42,6 @@
       </div>
     </div>
     <div class="grid justify-items-center -mt-12 sm:mt-[-80px] mb-12">
-      {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce size-16 text-gray-50">
-        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-      </svg> --}}
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="animate-bounce size-16 text-gray-50 -m-10">
         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
       </svg>
@@ -108,7 +55,6 @@
         <div class="col-span-6 p-12">
           <h5 class="text-gray-50 font-semibold h4">Per visualizzare la mia dashboard con tutti i progetti e le tecnologie clicca qui</h5>
           <div class="flex relative justify-center">
-            {{-- <a href="" class="text-orange-500 font-bold h4 mt-5 w-44 h-12 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 animate-ping absolute inline-flex opacity-80 duration-1000"></a> --}}
             <a href="{{route('dashboard')}}" class="text-gray-50 font-bold h4 mt-5 bg-orange-500 hover:bg-orange-800 px-5 py-2.5 rounded-3 relative inline-flex">Dashboard</a>
           </div>
         </div>
@@ -156,7 +102,6 @@
         <a href="{{ route('post.show', ['post' => $post->id]) }}">
           <h5 class="mb-3 sm:text-2xl text-md font-bold tracking-tight text-white">{{$post->title}}</h5>
         </a>
-        {{-- <p class="mb-3 font-normal sm:text-lg text-xs text-gray-700 dark:text-gray-400">{{$post->description}}</p> --}}
         <a href="{{ route('post.show', ['post' => $post->id]) }}" class="inline-flex items-center px-3 me-2 mb-2 py-2 text-xs font-medium text-center text-white bg-zinc-800 rounded-full hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800">
           Info progetto
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
@@ -167,7 +112,6 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
         </a>
         @endif
-        {{-- <p class="text-xs text-zinc-400 my-3 sm:my-5">{{$post->created_at->format('d/m/Y')}}</p> --}}
         <p class="text-xs text-zinc-400 my-3">{{$post->created_at->format('d M, Y')}}</p>
       </div>
     </div>

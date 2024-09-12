@@ -1,27 +1,68 @@
 <x-main>
     
 
+    {{-- message notification --}}
+    @if (session('success'))    
+    <div class="container-sm justify-center flex">
+        <div id="toast-success" class="container-sm slide-bottom flex fixed items-center max-w-xs content-center justify-center p-3 mb-3 rounded-lg shadow text-zinc-400 bg-green-900" role="alert">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+              </svg>
+              <span class="sr-only">Check icon</span>
+          </div>
+          <div class="ms-3 text-sm font-normal">{{ session('success') }}</div>
+          <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-zinc-400 hover:bg-zinc-600 hover:text-zinc-500 rounded-lg focus:ring-2 focus:ring-zinc-300 p-1.5 inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#toast-success" aria-label="Close">
+              <span class="sr-only">Close</span>
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+    @endif
+    @if (session('delete'))    
+    <div class="container-sm justify-center flex">
+        <div id="toast-success" class="container-sm slide-bottom flex fixed items-center max-w-xs content-center justify-center p-3 mb-3 rounded-lg shadow text-zinc-400 bg-red-900" role="alert">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z"/>
+            </svg>
+              <span class="sr-only">Error icon</span>
+          </div>
+          <div class="ms-3 text-sm font-normal">{{ session('delete') }}</div>
+          <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-zinc-400 hover:bg-zinc-600 hover:text-zinc-500 rounded-lg focus:ring-2 focus:ring-zinc-300 p-1.5 inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#toast-success" aria-label="Close">
+              <span class="sr-only">Close</span>
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+    @endif
+    @if (session('update'))    
+    <div class="container-sm justify-center flex">
+        <div id="toast-success" class="container-sm slide-bottom flex fixed items-center max-w-xs content-center justify-center p-3 mb-3 rounded-lg shadow text-zinc-400 bg-blue-900" role="alert">
+          <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 1v5h-5M2 19v-5h5m10-4a8 8 0 0 1-14.947 3.97M1 10a8 8 0 0 1 14.947-3.97"/>
+            </svg>
+              <span class="sr-only">Refresh icon</span>
+          </div>
+          <div class="ms-3 text-sm font-normal">{{ session('update') }}</div>
+          <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-zinc-400 hover:bg-zinc-600 hover:text-zinc-500 rounded-lg focus:ring-2 focus:ring-zinc-300 p-1.5 inline-flex items-center justify-center h-8 w-8" data-dismiss-target="#toast-success" aria-label="Close">
+              <span class="sr-only">Close</span>
+              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+    @endif
 
 
 
     <div class="container-sm my-5 py-5 min-h-screen">
-
-        {{-- <div id="toast-default" class="fixed float-right flex items-center justify-items-center w-full max-w-xs p-4 rounded-lg shadow text-gray-400 bg-gray-800" role="alert">
-            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
-                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.147 15.085a7.159 7.159 0 0 1-6.189 3.307A6.713 6.713 0 0 1 3.1 15.444c-2.679-4.513.287-8.737.888-9.548A4.373 4.373 0 0 0 5 1.608c1.287.953 6.445 3.218 5.537 10.5 1.5-1.122 2.706-3.01 2.853-6.14 1.433 1.049 3.993 5.395 1.757 9.117Z"/>
-                </svg>
-                <span class="sr-only">Fire icon</span>
-            </div>
-            <div class="ms-3 text-sm font-normal">Set yourself free.</div>
-            <button type="button" class="ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 text-gray-500 hover:text-white bg-gray-800" data-dismiss-target="#toast-default" aria-label="Close">
-                <span class="sr-only">Close</span>
-                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                </svg>
-            </button>
-        </div> --}}
-        
         
         <h1 class="h1 text-gray-50 font-semibold mt-12">Dashboard Personale</h1>
         <p class="text-gray-50 font-thin h6">Qui trovi la dashboard con i miei progetti e le tenologie che uso e quelle che sto imparando</p>
@@ -30,24 +71,6 @@
         <p class="text-white font-thin mb-10 text-lg">Ciao, <span class="font-bold text-orange-500">{{ Auth::user()->name }}</span></p>
         @else
             <p class="mb-10"></p>
-        @endif
-        
-        
-
-        @if (session('success'))    
-        <div id="flash" class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-500 role="alert">
-            <span class="font-medium">{{session('success')}}</span>
-        </div>
-        @endif
-        @if (session('delete'))    
-        <div id="flash" class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-500 role="alert">
-            <span class="font-medium">{{session('delete')}}</span>
-        </div>
-        @endif
-        @if (session('update'))    
-        <div id="flash" class="p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-500 role="alert">
-            <span class="font-medium">{{session('update')}}</span>
-        </div>
         @endif
         
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 min-h-52">
