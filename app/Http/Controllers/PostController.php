@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Models\Image;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -50,6 +51,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        Post::all();
         return view('post.show', compact('post'));
     }
 
@@ -58,7 +60,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('post.edit', compact('post'));
+        $image = Image::all();
+        Post::all();
+        return view('post.edit', compact('post', 'image'));
     }
 
     /**

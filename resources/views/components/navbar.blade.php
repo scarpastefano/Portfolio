@@ -1,5 +1,5 @@
-<nav class="bg-transparent border-dark-800 dark:bg-dark-900 container-none p-3 m-0 fixed top-0 w-full z-50 backdrop-blur-sm">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+<nav class="bg-transparent border-dark-800 dark:bg-dark-900 container-none p-3 m-0 fixed top-0 w-full z-50 backdrop-blur">
+  <div class="container-xl flex flex-wrap items-center justify-between mx-auto">
     <a href="{{route('homepage')}}" class="flex items-center space-x-3 rtl:space-x-reverse">
       <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-50"><span class="text-orange-500">Stefano</span>Scarpa</span>
     </a>

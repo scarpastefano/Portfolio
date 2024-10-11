@@ -14,7 +14,7 @@
         <p class="mb-2 mt-4 text-sm font-medium text-gray-900 dark:text-white">Immagine</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-                <img class="w-full h-64 border rounded-3 object-cover" src="{{Storage::url($post->image)}}" alt="nessuna immagine">
+                <img class="w-full h-64 border rounded-3 object-cover" src="{{ Storage::url($image->path) }}" alt="nessuna immagine">
             </div>
             <div>
                 <div class="flex items-center justify-center w-full">
@@ -26,7 +26,7 @@
                             <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                             <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                         </div>
-                        <input id="dropzone-file" name="image" value type="file" class="text-xs text-gray-500 dark:text-gray-400" value="{{ Storage::url($post->image) }}" />
+                        <input id="dropzone-file" name="image" value type="file" class="text-xs text-gray-500 dark:text-gray-400" value="{{ Storage::URL($post->image) }}" />
                     </label>
                 </div> 
             </div>
