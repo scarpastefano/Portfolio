@@ -3,6 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* body {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
 @keyframes animate {
     0%{
         transform: translateY(0) rotate(0deg);

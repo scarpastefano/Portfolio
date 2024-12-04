@@ -34,11 +34,14 @@
           <a href="https://www.linkedin.com/in/scarpa-stefano/" class="flex bg-zinc-800 py-2 px-3 rounded-full w-auto justify-center align-middle">
             <span>Linkedin</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
           </a>
+          {{-- <a href="asset/cv-stefano-scarpa.pdf" download class="flex bg-zinc-800 py-2 px-3 rounded-full w-auto justify-center align-middle">
+            <span>Download CV</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-4 text-tertiary"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"></path></svg>
+          </a> --}}
         </div>
         
       </div>
       <div class="text-gray-50 sm:col-span-4 grid justify-items-center content-center">
-        <img class="h-56 w-56 object-cover rounded-full shadow-lg" src="{{URL::asset('asset/IMG_5344.jpeg')}}" alt="">
+        <img class="h-56 w-56 object-cover rounded-full shadow-lg" src="{{URL::asset('asset/IMG_7459.jpg')}}" alt="">
       </div>
     </div>
     <div class="grid justify-items-center -mt-12 sm:mt-[-80px] mb-12">
